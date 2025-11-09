@@ -1,22 +1,22 @@
 # FM-using-Python
 
-Aim
+### Aim
 
 
 To implement and analyze frequency modulation (FM) using Python's NumPy and Matplotlib libraries. 
 
-Apparatus Required
+### Apparatus Required
 
 1.	Software: Python with NumPy and Matplotlib libraries
 2.	Hardware: Personal Computer
   
-Theory
+### Theory
 
 Frequency Modulation (FM) is a method of transmitting information over a carrier wave by varying its frequency in accordance with the amplitude of the input signal (message signal). The frequency of the carrier wave is varied according to the instantaneous amplitude of the message signal. The general form of an FM signal is:
 
 
 
-Algorithm
+### Algorithm
 
 
 1.	Initialize Parameters: Set the values for carrier frequency, message frequency, sampling frequency, and frequency deviation.
@@ -26,22 +26,45 @@ Algorithm
 5.	Generate FM Signal: Apply the FM modulation formula to obtain the modulated signal.
 6.	Plot the Signals: Use Matplotlib to plot the message signal, carrier signal, and modulated signal.
 
-Program
+### Program
 
+```python
+import  numpy as np
+import matplotlib.pyplot as plt
+Am=6.4
+fm=525
+Ac=12.8
+fc=5250
+fs=52500
+b=6.4
+t=np.arange(0, 3/fm, 1/fs)
 
-Output Waveform
+m = Am*np.cos(2*3.14*fm*t)
+plt.subplot(3,1,1)
+plt.plot(t,m)
 
+c= Ac*np.cos(2*3.14*fc*t)
+plt.subplot(3,1,2)
+plt.plot(t,c)
 
-Tabular Column
+s=Ac*np.cos(2*3.14*fc*t+b*np.sin(2*3.14*fm*t))
+plt.subplot(3,1,3)
+plt.plot(t,s)
 
+```
 
+### Output Waveform
 
-Calculation
+<img width="699" height="417" alt="Screenshot 2025-11-09 224908" src="https://github.com/user-attachments/assets/32871f36-9bf7-46d5-bffe-bd0be654d1eb" />
 
+### Tabular Column
 
+![WhatsApp Image 2025-11-09 at 23 01 01_444dd40b](https://github.com/user-attachments/assets/d1a32837-7028-4aad-940e-808b524a8e4c)
 
+### Calculation
 
-Result
+![WhatsApp Image 2025-11-09 at 23 05 24_46bb6d02](https://github.com/user-attachments/assets/2dbfe77d-9477-403e-874b-56d7b73e7835)
 
+### Result
 
 The message signal, carrier signal, and frequency modulated (FM) signal will be displayed in separate plots. The modulated signal will show frequency variations corresponding to the amplitude of the message signal.
