@@ -32,10 +32,10 @@ Frequency Modulation (FM) is a method of transmitting information over a carrier
 import  numpy as np
 import matplotlib.pyplot as plt
 Am=6.4
-fm=525
+fm=515
 Ac=12.8
-fc=5250
-fs=52500
+fc=5150
+fs=51500
 b=6.4
 t=np.arange(0, 3/fm, 1/fs)
 
@@ -59,11 +59,11 @@ plt.plot(t,s)
 
 ### Tabular Column
 
-![WhatsApp Image 2025-11-09 at 23 01 01_444dd40b](https://github.com/user-attachments/assets/d1a32837-7028-4aad-940e-808b524a8e4c)
+![WhatsApp Image 2025-11-29 at 1 17 27 PM](https://github.com/user-attachments/assets/468dfeaa-038f-4404-b439-aa2e09e322eb)
 
 ### Calculation
 
-![WhatsApp Image 2025-11-09 at 23 05 24_46bb6d02](https://github.com/user-attachments/assets/2dbfe77d-9477-403e-874b-56d7b73e7835)
+![WhatsApp Image 2025-11-29 at 1 25 33 PM](https://github.com/user-attachments/assets/cb3cc771-ba7e-40df-920a-1738487f5028)
 
 ### Result
 
